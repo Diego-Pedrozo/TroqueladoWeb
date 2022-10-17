@@ -29,18 +29,22 @@ router.get('/proceso2', (req, res) => {
     res.render('links/proceso2');
 });
 
-router.post('/proceso2', async (req, res) => {
-    const {validar, residuos} = req.body;
-    const proceso2 ={
-        material,
-        cantidad_material,
-        residuos
-    };
-    await pool.query('INSERT INTO registro set ?', [proceso2])
+router.post('/proceso2', (req, res) => {
+    const {validar, residuo} = req.body;
+    residuos = residuo;
+    tiempo += 10;
+    console.log(residuos);
+    //const proceso2 ={
+    //    material,
+    //    cantidad_material,
+    //    residuos
+    //};
+    //await pool.query('INSERT INTO registro set ?', [proceso2])
     if (validar == "Si") {
-        res.render('links/proceso2-1');        
+        res.render('links/proceso2-1'); 
+        tiempo+=10;       
     }else res.render('links/proceso3'); 
-    console.log(proceso2);
+    //console.log(proceso2);
 });
 
 router.get('/proceso2-1', (req, res) => {
@@ -55,12 +59,30 @@ router.get('/proceso3', (req, res) => {
     res.render('links/proceso3');
 });
 
+router.post('/proceso3', (req, res) => {
+    res.render('links/proceso4');
+});
+
 router.get('/proceso4', (req, res) => {
     res.render('links/proceso4');
 });
 
 router.get('/proceso5', (req, res) => {
     res.render('links/proceso5');
+});
+
+router.post('/proceso5', async (req, res) => {
+    tiempo+=30;
+    const proceso2 ={
+        material,
+        cantidad_material,
+        residuos,
+        tiempo
+    };
+    await pool.query('INSERT INTO registro set ?', [proceso2])
+    console.log(proceso2);
+    //res.render('links/index');
+    res.redirect('index');
 });
 
 module.exports = router;

@@ -30,6 +30,8 @@ app.use((req, res, next) => {
 });
 material = undefined;
 cantidad_material = 0;
+residuos = 0;
+tiempo = 0;
 
 //Routes
 app.use(require('./routes/index'));
