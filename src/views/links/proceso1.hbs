@@ -1,0 +1,50 @@
+<div class="back">
+    <h1 style="text-align: center; padding: 20px ;">Proceso 1: Selección de
+        material</h1>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col" style="display: flex; justify-content:center;">
+                <div class="card" style="width: 20rem;">
+                    <img
+                        src="https://yieh.com/Common/ShowaImg?faname=4BD075EDADDBDBC1A2AF05A8D85F02FC2965C4CA3932F74293978ACCDC9F7CB6B0DFFEAEB8EB8EAE85B8A9A96BBA30A1"
+                        class="card-img-top" sizes="100px" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lamina</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: flex; justify-content:center;">
+                <div class="card" style="width: 20rem;">
+                    <img
+                        src="http://panelyacanalados.com/wp-content/uploads/2021/11/piezas-de-tubo-de-cedula-40.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tubo</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container p-4 w-50">
+    <form action="/links/proceso1" method="post">
+        <div class="mb-3">
+            <label class="form-label">Seleccione el tipo de material</label>
+            <select name="materia" class="form-select" aria-label="Default
+                select example">
+                <option value="Lámina">Lámina</option>
+                <option value="Tubo">Tubo</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="cantidadMaterial" class="form-label">Cantidad de
+                material</label>
+            <input name="cantidad" type="number" class="form-control"
+                id="cantidadMaterial" required>
+        </div>
+        <div class="mb-3" style="display: flex; flex-direction: column;
+            align-items: center;">
+            <button type="submit" class="btn btn-primary">Siguiente</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,84 @@
+<div class="container p-4 w-100">
+    <form action="/links/proceso2" method="post">
+        <div class="back">
+            <h1 style="text-align: center; padding: 20px ;">Proceso 2: Baño del
+                material en fosfato</h1>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col" style="display: flex;
+                        justify-content:center;">
+                        <div class="card" style="width: 15rem;">
+                            <img
+                                src="https://globen.es/wp-content/uploads/Paso-1.png"
+                                class="card-img-top" sizes="100px"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Paso 1</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" value="" id="paso1" required>
+                                    <label class="form-check-label" for="paso1">
+                                        Completado
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="display: flex;
+                        justify-content:center;">
+                        <div class="card" style="width: 15rem;">
+                            <img
+                                src="https://globen.es/wp-content/uploads/Paso-1.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Paso 2</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" value="" id="paso2" required>
+                                    <label class="form-check-label" for="paso2">
+                                        Completado
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="display: flex;
+                        justify-content:center;">
+                        <div class="card" style="width: 15rem;">
+                            <img
+                                src="https://globen.es/wp-content/uploads/Paso-1.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Paso 3</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                        type="checkbox" value="" id="paso3" required>
+                                    <label class="form-check-label" for="paso3">
+                                        Completado
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3" style="display: flex; flex-direction: column; align-items: center;">
+            <label class="form-label w-50">Se generarón residuos?</label>
+            <select name="validar" class="form-select w-50" aria-label="Default
+                select example">
+                <option value="No">No</option>
+                <option value="Si">Si</option>
+            </select>
+        </div>
+        <div class="mb-3" style="display: flex; flex-direction: column; align-items: center;">
+            <label for="cantidadMaterial" class="form-label w-50">Cantidad de
+                residuos generada</label>
+            <input name="residuos" type="number" class="form-control w-50"
+                id="cantidadMaterial" value=0 required>
+        </div>
+        <div class="mb-3" style="display: flex; flex-direction: column; align-items: center;">
+            <button type="submit" class="btn btn-primary">Siguiente</button>
+        </div>
+    </form>
+</div>
