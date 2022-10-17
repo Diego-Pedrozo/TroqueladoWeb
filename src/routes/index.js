@@ -8,7 +8,6 @@ const { createPool } = require('mysql');
 // });
 
 router.get('/',  async (req, res) => {
-    tiempo = 0;
     const registros = await pool.query('SELECT * FROM registro')
     res.render('index', { registros });
  });

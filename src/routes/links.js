@@ -81,6 +81,8 @@ router.post('/proceso5', async (req, res) => {
     };
     await pool.query('INSERT INTO registro set ?', [proceso2])
     console.log(proceso2);
+    tiempo = 0;
+    console.log(proceso2);
     //res.render('links/index');
     res.redirect('index');
 });
